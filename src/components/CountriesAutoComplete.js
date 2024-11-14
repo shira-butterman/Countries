@@ -25,7 +25,6 @@ function CountriesAutoComplete({ selectedCountry }) {
   };
 
   const handleCountryClick = (country) => {
-    setInputValue(country.name);
     selectedCountry(country);
     setIsListOpen(false);
   };
