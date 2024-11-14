@@ -1,38 +1,141 @@
-.App {
-  text-align: center;
+.autocomplete-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 30px;
+  width: 300px;
+  padding-top: 20px;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.autocomplete-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  transition: border-color 0.3s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.autocomplete-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.autocomplete-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 60vh;
+  overflow-y: auto;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.autocomplete-list-item {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.autocomplete-list-item:hover {
+  background-color: #f0f0f0;
+}
+
+.autocomplete-list-item:active {
+  background-color: #d1e7fd;
+}
+.country-details {
+  width: 300px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.small-country-flag {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.country-name {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.country-name:hover {
+  color: darkblue;
+}
+
+.country-capital {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.country-details-page {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.country-details-info {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.country-flag {
+  width: 150px;
+  height: auto;
+  margin: 10px 0;
+}
+
+.country-details-info h1 {
+  margin-bottom: 10px;
+}
+
+.country-details-info p {
+  font-size: 18px;
+  color: #555;
+}
+
+.back-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
   color: white;
+  border-radius: 4px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.back-button:hover {
+  background-color: #0056b3;
 }
